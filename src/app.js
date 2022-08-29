@@ -1,4 +1,4 @@
-import express from "express";
+import express, { urlencoded } from "express";
 import config from './config'
 import listRoutes from './routes/list.rout'
 
@@ -7,6 +7,10 @@ let port
 
 // settings
 app.set('port', config.port)
+
+//midlewares
+app.use(express.json())
+app.use(urlencoded({ extended: false }))
 
 app.use(listRoutes)
 
