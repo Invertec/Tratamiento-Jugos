@@ -1,4 +1,4 @@
-@api = http://localhost:5000/list
+@api = http://localhost:3000/list
 
 GET {{api}}
 
@@ -7,5 +7,7 @@ POST {{api}}
 Content-Type: application/json
 
 {
-    
+    "Fecha": "2022-08-30",
+    "Producto": "HOLA2",
+    "OrdenFabricacion": "5"
 }
