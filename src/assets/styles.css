@@ -1,6 +1,8 @@
-.clase1 {
-    width: 200px;
-    height: 200px;
-    background-color: blueviolet;
-    margin-bottom: 10px;
+body {
+    background-color: #f7f6f6;
+}
+
+table thead {
+    background-color: #0a4f70;
+    color: white;
 }
