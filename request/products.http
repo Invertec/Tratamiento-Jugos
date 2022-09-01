@@ -7,7 +7,7 @@ POST {{api}}
 Content-Type: application/json
 
 {
-    "Fecha": "2022-08-30",
-    "Producto": "HOLA7",
-    "OrdenFabricacion": "9"
+    "Fecha": "2022-08-31",
+    "Producto": "HOL12",
+    "OrdenFabricacion": "10"
 }

@@ -1,9 +1,9 @@
 import sql from 'mssql'
 
 const dbSettings = {
-    user: 'administrador',
-    password: '12345678',
-    server: 'localhost',
+    user: 'sa',
+    password: 'Invertek23',
+    server: '192.168.1.12',
     database:'prueba',
     options: {
         encrypt: true,

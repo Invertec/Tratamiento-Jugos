@@ -1,12 +1,5 @@
 import {getConnection, sql} from '../database/connection'
 
-
-export const getHtml = async (req, res) => {
-  
-}
-
-
-
 export const getList = async ( req, res ) => {
 
     const pool = await getConnection()
