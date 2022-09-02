@@ -19,7 +19,7 @@ export const createNewLog = async (req,res) => {
     
     const pool = await getConnection()
     await pool.request()
-    .input("Fecha", sql.Date, Fecha)
+    .input("Fecha", sql.DateTime, Fecha)
     .input("Producto",sql.VarChar,Producto)
     .input("OrdenFabricacion",sql.VarChar,OrdenFabricacion)
     .query('INSERT INTO Tabla_datos (Fecha,Producto,OrdenFabricacion) VALUES (@Fecha,@Producto,@OrdenFabricacion)')
