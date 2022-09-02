@@ -1,8 +1,14 @@
-body {
-    background-color: #f7f6f6;
-}
 
-table thead {
+thead tr {
     background-color: #0a4f70;
     color: white;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #0a4f70;
+    border-radius: 5px;
 }
