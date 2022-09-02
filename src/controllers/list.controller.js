@@ -11,19 +11,20 @@ export const getList = async ( req, res ) => {
 
 export const createNewLog = async (req,res) => {
 
-    let { Fecha,Producto, OrdenFabricacion } = req.body
+    let { Fecha,Hora,Producto, OrdenFabricacion } = req.body
 
-    if ( Fecha === null || Producto === null || OrdenFabricacion === null ){
+    if ( Fecha === null || Hora === null  || Producto === null || OrdenFabricacion === null ){
         return res.status(400).json({msg:'Bad Request.'})
     }
     
     const pool = await getConnection()
     await pool.request()
-    .input("Fecha", sql.DateTime, Fecha)
+    .input("Fecha", sql.VarChar, Fecha)
+    .input("Hora", sql.VarChar, Hora)
     .input("Producto",sql.VarChar,Producto)
     .input("OrdenFabricacion",sql.VarChar,OrdenFabricacion)
-    .query('INSERT INTO Tabla_datos (Fecha,Producto,OrdenFabricacion) VALUES (@Fecha,@Producto,@OrdenFabricacion)')
+    .query('INSERT INTO Tabla_datos (Fecha,Hora,Producto,OrdenFabricacion) VALUES (@Fecha,@Hora,@Producto,@OrdenFabricacion)')
 
-    res.json({Fecha,Producto,OrdenFabricacion})
+    res.json({Fecha,Hora,Producto,OrdenFabricacion})
 
 }

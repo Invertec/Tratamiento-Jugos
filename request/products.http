@@ -8,6 +8,7 @@ Content-Type: application/json
 
 {
     "Fecha": "2022-08-31",
+    "Hora": "9:27",
     "Producto": "HOL12",
     "OrdenFabricacion": "10"
 }

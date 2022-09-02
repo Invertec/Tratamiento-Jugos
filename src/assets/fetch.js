@@ -5,6 +5,7 @@ let resultados = ''
 const modalArticulo = new bootstrap.Modal(document.getElementById('modalArticulo'));
 const formArticulo = document.querySelector('form')
 const Fecha = document.getElementById('Fecha')
+const Hora = document.getElementById('Hora')
 const Producto = document.getElementById('Producto')
 const OrdenFabricacion = document.getElementById('OrdenFabricacion')
 let opcion = ''
@@ -13,12 +14,14 @@ btnCrear.addEventListener('click', () => {
     modalArticulo.show()
 })
 
+// Mostrar datos
 const mostrar = (articulos) => {
     articulos.forEach(articulo => {
         resultados += `
                     <tr>
                         <td>${articulo.id}</td>
                         <td>${articulo.Fecha}</td>
+                        <td>${articulo.Hora}</td>
                         <td>${articulo.Producto}</td>
                         <td>${articulo.OrdenFabricacion}</td>
                     </tr> `
@@ -26,7 +29,7 @@ const mostrar = (articulos) => {
     contenedor.innerHTML = resultados
 }
 
-// Mostrar datos
+
 fetch(url)
     .then( response => response.json() )
     .then( data => mostrar(data) )
@@ -39,6 +42,7 @@ const guardarRegistro = async () => {
 
     let data = {
         "Fecha": document.getElementById('Fecha').value,
+        "Hora": document.getElementById('Hora').value,
         "Producto": document.getElementById('Producto').value,
         "OrdenFabricacion": document.getElementById('OrdenFabricacion').value
     }
